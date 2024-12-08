@@ -59,11 +59,11 @@
   }
 }
 
-/* tab width */
-.element {
+/* tab width 
+#element {
   --tab-min-width: 300px !important;
 }
-
+*/
 #reload-button {
   list-style-image: url("https://www.svgrepo.com/show/500265/reload-preset-16.svg") !important;
 }
@@ -126,8 +126,8 @@
 .tabbrowser-tab {
   &:not([pinned]) {
     flex: 100 100;
-    max-width: var !important;
-    min-width: var(--tab-min-width);
+    max-width: 999999px!important;
+    min-width: 90px !important;
     transition: min-width 100ms ease-out, max-width 100ms ease-out;
   }
 }
