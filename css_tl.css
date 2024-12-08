@@ -1,0 +1,24 @@
+.Time hr {
+    display: none;
+}
+
+
+.Dashboard.dark .theme-fill {
+  fill: #4d45b3;
+}
+
+
+element {
+  color: rgb(69, 79, 176);
+
+  font-size: 18px;
+
+  font-weight: 100;
+
+}
+
+
+.Dashboard.dark .theme-stroke {
+  stroke: #4d45b3;
+}
+
