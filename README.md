@@ -4,10 +4,10 @@
 
 *settings to use in Tabliss*
 
-[Browser preview](img/widgets-in-tabliss.png)
-[Browser preview](img/time-setting.png)
+![Browser preview](img/widgets-in-tabliss.png)
+![Browser preview](img/time-setting.png)
 
 **css code can be founds in ccs_tl.css**
 
-[Browser preview](img/custom-css.png)
+![Browser preview](img/custom-css.png)
 
