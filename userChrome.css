@@ -59,11 +59,7 @@
   }
 }
 
-/* tab width 
-#element {
-  --tab-min-width: 300px !important;
-}
-*/
+
 #reload-button {
   list-style-image: url("https://www.svgrepo.com/show/500265/reload-preset-16.svg") !important;
 }
