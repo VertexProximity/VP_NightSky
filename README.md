@@ -1,4 +1,6 @@
-**This is a modified verision of Starry Firefox theme with Tabliss extention**
+**This is a modified verision of Starry Firefox theme with Tabliss extention and Purple starfield - Animated extention**
+
+https://addons.mozilla.org/en-US/firefox/addon/purple-starfield-animated/
 
 ![Browser preview](/preview/preview.png)
 
