@@ -2,6 +2,8 @@
 
 https://addons.mozilla.org/en-US/firefox/addon/purple-starfield-animated/
 
+Install sideberry and go to settings-styles editor. Then paste contents of sb_se.css on the side.
+
 ![Browser preview](/preview/preview.png)
 
 *settings to use in Tabliss*
