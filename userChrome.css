@@ -23,10 +23,27 @@
 */
 
 
-
-
-
 /*-------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------*/
+
+/*center's tab content*/
+.tabbrowser-tab[selected]:not(:hover):not([pinned]) .tab-label-container,
+#tabbrowser-tabs:not([closebuttons="activetab"]) .tabbrowser-tab:not(:hover):not([pinned]) .tab-label-container{
+  padding-inline-end: 6px !important;
+}
+.tab-icon-stack{
+  margin-inline-start: auto
+}
+.tab-label-container{
+  max-width: min-content;
+  margin-inline-end: auto;
+}
+
+/*-------------------------------------------------------*/
+
+
 
 /*----------------------------------------------------------------------------------*/
 
