@@ -25,7 +25,45 @@
 
 
 
+
 /*-------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------*/
+
+/* adds loading bar as a overlay on the tab as the website loads*/
+
+@keyframes tab-loading-line-anim{ from{ background-size: 0% } to { background-size: 20% } }
+.tab-background::after{
+    background-size: 90%;
+}
+.tabbrowser-tab:is([busy],[bursting]) > .tab-stack > .tab-background::after{
+  content: "";
+  display: flex;
+  height: 22px;
+  background-color:transparent;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(currentColor,currentColor);
+  transition: background-size 80ms ease-out;
+}
+.tabbrowser-tab[busy]:not([progress],[bursting]) > .tab-stack > .tab-background::after{
+  animation: tab-loading-line-anim 80ms ease;
+  background-size: 20%;
+  opacity: 0.5;
+}
+.tabbrowser-tab[busy][progress] > .tab-stack > .tab-background::after{
+  transition-duration: 1ms;
+}
+.tabbrowser-tab[bursting] > .tab-stack > .tab-background::after{
+  transition: background-size 80ms ease-out, opacity 80ms linear;
+  background-size: 100%;
+  opacity: 0;
+}
+.tab-throbber{ display: none !important; }
+.tab-icon-image[src]{ display: block !important; }
+/*----------------------------------------------------------------------------------*/
+
+
+
 /*----------------------------------------------------------------------------------*/
 
 /* code below flips the position of url bar and tabs*/
