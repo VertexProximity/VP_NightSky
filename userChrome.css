@@ -13,17 +13,88 @@
 }
 */
 
-/*
 
-
-#reload-button {
-  list-style-image: url("chrome://global/skin/icons/reload.svg");
+.urlbar-input-container, #searchbar {
+  border-radius: 4.5px !important;
+  overflow:
+hidden;
 }
 
-*/
+.urlbar-input-container {
+  border: 1.5px solid #9700ff !important;
+  /*! padding: var(--urlbar-container-padding); */
+  /*! min-width: 0; */
+}
 
 
-/*-------------------------------------------------------------------------------*/
+#tabbrowser-tabbox {
+  @media -moz-pref("sidebar.revamp") {
+    {
+      outline: 0.01px solid var(--chrome-content-separator-color);
+      box-shadow: var(--content-area-shadow);
+      border-radius: 39px !important;
+    }
+  }
+}
+
+element {
+  --lwt-accent-color: rgba(80, 40, 148, 0.3) !important;;
+  --lwt-text-color: rgba(242, 205, 246);
+  --arrowpanel-background: rgb(4, 4, 16);
+  --arrowpanel-color: rgb(142, 74, 201);
+  --toolbar-field-background-color: rgba(41, 41, 85, 0.7);
+  --toolbar-bgcolor: rgba(4, 4, 16, 0.699999988079071);
+  --toolbar-color: rgb(142, 74, 201);
+  --toolbar-field-color: rgb(231, 1, 136);
+  --toolbar-field-border-color: rgba(142, 74, 201, 0.25);
+  --toolbar-field-focus-background-color: rgba(4, 4, 16, 1);
+  --toolbar-field-focus-color: rgb(242, 205, 246);
+  --newtab-background-color: rgb(4, 4, 16);
+  --newtab-text-primary-color: rgb(242, 205, 246);
+  --tab-loading-fill: rgb(231, 1, 136);
+  --lwt-tab-line-color: rgb(231, 1, 136);
+  --tabpanel-background-color: rgb(4, 4, 16);
+  --arrowpanel-border-color: rgb(231, 1, 136);
+  --toolbar-field-focus-border-color: rgb(231, 1, 136);
+  --tabs-navbar-separator-color: rgb(231, 1, 136);
+  --chrome-content-separator-color: rgb(4, 4, 16);
+  --urlbarView-highlight-background: rgba(231, 1, 136, 0.20000000298023224);
+  --urlbarView-highlight-color: rgb(231, 1, 136);
+  --sidebar-background-color: rgb(4, 4, 16);
+  --sidebar-text-color: rgb(142, 74, 201);
+  --lwt-additional-images: url(moz-extension\:\/\/5f16afdc-1f36-4adf-95d7-17c18e43255a\/images\/0\.png);
+  --lwt-toolbar-field-highlight: rgba(231, 1, 136, 1);
+  --lwt-toolbar-field-highlight-text: rgb(242, 205, 246);
+  --lwt-background-tiling: no-repeat;
+  --toolbarseparator-color: rgb(231, 1, 136);
+  --toolbarbutton-hover-background: rgba(142, 74, 201, 0.25);
+  --toolbarbutton-active-background: rgba(142, 74, 201, 0.5);
+  --sidebar-border-color: rgb(231, 1, 136);
+  --lwt-background-alignment: right center;
+  --newtab-background-color-secondary: rgb(35, 35, 44);
+}
+
+.browser-toolbar {
+  @media not -moz-pref("sidebar.verticalTabs") {
+    &:not(.browser-titlebar) {
+      background-color: rgb(255, 255, 255, 0.00000001) !important;
+      color: var(--toolbar-color);
+    }
+  }
+}
+
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto min-content min-content;
+  box-sizing: border-box;
+  height: 0%;
+  max-width: 0 !important;
+  padding-inline: 0;
+}
+
+
+
 
 
 /*------------------------------------------------------*/
@@ -43,21 +114,10 @@
 
 /*-------------------------------------------------------*/
 
-/*----------------------------------------------------------------------------------*/
-
-/*center's content in url bar*/
-
-#urlbar:not([focused]) #urlbar-input, /* ID for Firefox 70 */
-#urlbar:not([focused]) .urlbar-input{ 
-	text-align: center !important; 
-}
 
 /*----------------------------------------------------------------------------------*/
 
-
-/*----------------------------------------------------------------------------------*/
-
-/* adds loading bar as a overlay on the tab as the website loads*/
+/* adds loading bar on top of the tab as the website loads*/
 
 @keyframes tab-loading-line-anim{ from{ background-size: 0% } to { background-size: 20% } }
 .tab-background::after{
@@ -93,6 +153,31 @@
 
 /*----------------------------------------------------------------------------------*/
 
+/*center's content in url bar*/
+
+#urlbar:not([focused]) #urlbar-input, /* ID for Firefox 70 */
+#urlbar:not([focused]) .urlbar-input{ 
+	text-align: center !important; 
+}
+
+/*----------------------------------------------------------------------------------*/
+
+
+/*
+
+
+#reload-button {
+  list-style-image: url("chrome://global/skin/icons/reload.svg");
+}
+
+*/
+
+
+
+
+/*-------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
 /* code below flips the position of url bar and tabs*/
 
 /* Place tabs below the address bar */
@@ -124,7 +209,11 @@
   }
 }
 
-
+/* tab width 
+#element {
+  --tab-min-width: 300px !important;
+}
+*/
 #reload-button {
   list-style-image: url("https://www.svgrepo.com/show/500265/reload-preset-16.svg") !important;
 }
@@ -138,7 +227,7 @@
 
 #sidebar-box {
   max-width: none !important;
-  min-width: 356px!important;
+  min-width: 388px !important;
 }
 
 /*
